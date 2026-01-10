@@ -861,7 +861,30 @@
                         <p class="placeholder">What Musk actually said and what he means by Universal High Income (not UBI's subsistence floor, but best-in-class everything for everyone)</p>
                         
                         <details class="section">
-                            <summary>1.1 The Claim: Universal High Income by 2030</summary>
+                            <summary>1.1 Defining Universal High Income</summary>
+                            <div class="content" contenteditable="true">
+                                <p><strong>Source:</strong> <a href="https://grokipedia.com/page/universal_high" target="_blank">Grokipedia: Universal High Income</a> (AI-generated wiki, fact-checked by Grok)</p>
+                                
+                                <blockquote style="border-left: 3px solid var(--tiffany-blue); padding-left: 16px; margin: 16px 0; background: var(--bg-secondary); padding: 16px; border-radius: 4px;">
+                                    <strong>Universal High Income (UHI)</strong> is a socioeconomic concept popularized by Elon Musk, referring to a future state of abundance driven by artificial intelligence (AI) and robotics, in which every person receives a high level of income sufficient to cover all needs—such as medical care, food, housing, and transportation—without the requirement of traditional employment, thereby eradicating poverty and rendering money largely obsolete as a tool for resource allocation.
+                                </blockquote>
+                                
+                                <p><strong>Key Distinctions from UBI:</strong></p>
+                                <ul>
+                                    <li><strong>UBI (Universal Basic Income):</strong> Subsistence floor—enough to survive</li>
+                                    <li><strong>UHI (Universal High Income):</strong> Best-in-class everything—"high" standard of living for all, with no scarcity except things intentionally limited</li>
+                                </ul>
+                                
+                                <p><strong>Timeline:</strong> Musk first articulated this vision in late 2023. He predicts the transformation could occur within 10–20 years, as humanoid robots and AI surpass human capabilities in all tasks, making work optional—"akin to a hobby rather than a necessity."</p>
+                                
+                                <p><strong>The Philosophical Question:</strong> The concept has sparked discussions on how individuals might find personal meaning when AI handles all labor—potentially leading to a benign scenario of universal prosperity, or societal disruption if technological advancement outpaces ethical safeguards.</p>
+                                
+                                <p><strong>Critical View (per Grokipedia):</strong> "While proponents see it as an optimistic endpoint of technological progress, critics argue it overlooks potential inequalities in AI access and the transition challenges for current economies reliant on human labor."</p>
+                            </div>
+                        </details>
+                        
+                        <details class="section">
+                            <summary>1.2 The Claim: Universal High Income by 2030</summary>
                             <div class="content" contenteditable="true">
                                 <p><strong>Source:</strong> <a href="https://finance.yahoo.com/news/elon-musk-says-well-best-230608267.html" target="_blank">"Elon Musk Says We'll All Have 'Best' Medical Care, Food, Housing and 'Everything Else' And A Universal 'High' Income When Robots Take Over By 2030"</a> — Jeannine Mancini, September 20, 2025</p>
                                 
@@ -872,7 +895,7 @@
                         </details>
                         
                         <details class="section">
-                            <summary>1.2 The Skeptic's Questions</summary>
+                            <summary>1.3 The Skeptic's Questions</summary>
                             <div class="content" contenteditable="true">
                                 <p>The article raises several critical questions that remain unanswered:</p>
                                 <ul>
@@ -885,7 +908,7 @@
                         </details>
                         
                         <details class="section">
-                            <summary>1.3 The Optimistic Frame vs. Reality</summary>
+                            <summary>1.4 The Optimistic Frame vs. Reality</summary>
                             <div class="content" contenteditable="true">
                                 <p>Musk's vision suggests a future where automation creates such efficiency that everyone shares in the abundance—though critics question whether the math actually works out.</p>
                                 
@@ -894,7 +917,7 @@
                         </details>
                         
                         <details class="section">
-                            <summary>1.4 Food Notes</summary>
+                            <summary>1.5 Food Notes</summary>
                             <div class="content" contenteditable="true">
                                 <p class="placeholder" style="font-style: italic; color: var(--text-muted);">
                                     <strong>For thought / further development:</strong><br>
@@ -1255,6 +1278,12 @@
                     <span class="artifact-timestamp">Sep 20, 2025 • Jeannine Mancini</span>
                 </div>
                 
+                <div class="source-category">Reference — UHI Definition</div>
+                <div class="artifact-item">
+                    <a href="https://grokipedia.com/page/universal_high" target="_blank" class="artifact-name">Grokipedia: Universal High Income</a>
+                    <span class="artifact-timestamp">AI-generated wiki • Fact-checked by Grok</span>
+                </div>
+                
                 <div class="source-category">Current Session</div>
                 <div class="artifact-item">
                     <a href="book_toc_chip.html" download class="artifact-name">book_toc_chip.html</a>
@@ -1392,7 +1421,7 @@
         <div class="disclaimer">
             <div class="disclaimer-title">Important Legal Disclaimer</div>
             <div class="disclaimer-text">
-                Investment advice and analysis provided by CHIP, Licensed Financial Advisor at 1st Discount Brokerage | askchip@1db.com | Securities offered through 1DB. Member FINRA/SIPC. This material is for informational purposes only and should not be construed as investment advice. Past performance does not guarantee future results.
+                Investment advice and analysis provided by CHIP, Licensed Financial Advisor at 1st Discount Brokerage | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e1f0d151d16170e3e4f1a1c501d1113">[email&#160;protected]</a> | Securities offered through 1DB. Member FINRA/SIPC. This material is for informational purposes only and should not be construed as investment advice. Past performance does not guarantee future results.
             </div>
         </div>
     </div>
@@ -1411,7 +1440,7 @@
     </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Theme Toggle
     const themes = ['light', 'dark', 'bw'];
     let currentTheme = localStorage.getItem('chip-theme') || 'light';
@@ -1509,15 +1538,11 @@
     }
     
     document.getElementById('sourceModal').addEventListener('click', (e) => {
-        if (e.target === document.getElementById('sourceModal')) {
+        if (e.target.id === 'sourceModal' || e.target.classList.contains('modal-close')) {
             closeModal();
         }
     });
     
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-    });
-</script>
-
+    </script>
 </body>
 </html>
